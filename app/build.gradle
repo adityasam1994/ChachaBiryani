@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.cyfoes.aditya.chachabiryani"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "default"
+    productFlavors {
+        user {
+            applicationId "com.cyfoes.aditya.chachabiryani.user"
+            versionName "1.0-user"
+            manifestPlaceholders = [
+                    appicon     : "@mipmap/chacha_launcher",
+                    appiconround: "@mipmap/chacha_launcher_round"
+            ]
+            // this boolean can be accessed in java classes by using BuildConfig class
+            // and now you can identify if your app is the paid version or not
+            buildConfigField "boolean", "ADMIN_VERSION", "false"
+        }
+        admin {
+            applicationId "com.cyfoes.aditya.chachabiryani.admin"
+            versionName "1.0-admin"
+            manifestPlaceholders = [
+                    appicon     : "@mipmap/chachaadmin_launcher",
+                    appiconround: "@mipmap/chachaadmin_launcher_round"
+            ]
+            buildConfigField "boolean", "ADMIN_VERSION", "true"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.google.firebase:firebase-auth:16.0.1'
+    implementation 'com.google.firebase:firebase-database:16.0.1'
+    implementation 'com.google.firebase:firebase-storage:16.0.1'
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.5.1'
+    implementation 'com.karumi:dexter:5.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.payumoney.core:payumoney-sdk:7.4.4'
+    implementation 'com.payumoney.sdkui:plug-n-play:1.5.0'
+    // retrofit library
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    // Retrofit API Interceptor for Debuging
+    // compile 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    implementation('com.paytm:pgplussdk:1.2.3') {
+        transitive = true;
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cart">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--action bar-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/pinktop"
+            android:translationZ="5dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center_vertical|left"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="MY CART"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/muslim_imogi"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <!--action bar-->
+        <LinearLayout
+            android:id="@+id/emptylayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YOUR CART IS EMPTY"
+                android:textSize="24sp"
+                android:textColor="@color/pinktop"
+                android:textStyle="bold"
+                android:background="@drawable/black_border"
+                android:padding="20dp"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:padding="15dp"
+                    android:paddingEnd="25dp"
+                    android:text="Your Order:"
+                    android:textColor="@color/pinktop"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/cart_item_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="vertical">
+
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:padding="15dp"
+                    android:text="Bill:"
+                    android:textColor="@color/pinktop"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/home_line" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Deliver to:"
+                            android:textColor="@color/darkgrey"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/addresstext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="My Address"
+                            android:textSize="10dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/changeaddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="CHANGE ADDRESS"
+                        android:textColor="@color/pinktop"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:drawable/dialog_holo_light_frame"
+                        android:padding="15dp"
+                        android:text="Payment Method:"
+                        android:textColor="@color/pinktop"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/radiogroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radiocod"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="CASH ON DELIVERY"
+                            android:checked="true"
+                            android:textSize="10sp"/>
+
+                        <RadioButton
+                            android:id="@+id/radiopaytm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="PAY ONLINE"
+                            android:layout_weight="1"
+                            android:textSize="10sp"/>
+                        <!--<RadioButton
+                            android:id="@+id/radiopayu"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="PAYUMONEY"
+                            android:layout_weight="0"
+                            android:textSize="10sp"/>-->
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/dialog_holo_light_frame"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="\u20B9"
+                            android:textColor="@color/darkgrey"
+                            android:textSize="24dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/cartprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="0"
+                            android:textColor="@color/darkgrey"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/checkout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_button"
+                        android:text="CHECKOUT"
+                        android:textColor="@color/pinktop"
+                        android:textStyle="bold"
+                        android:translationZ="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/darkgrey"
+            android:fitsSystemWindows="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:itemBackground="@drawable/background_selector"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="#dedede"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_navigation_items" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

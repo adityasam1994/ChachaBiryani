@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f6445c</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="darkgrey">#282828</color>
+    <color name="lightgrey">#787878</color>
+    <color name="pinktop">#f6445c</color>
+    <color name="pinkbutton">#dd2e65</color>
+    <color name="lightpink">#ffe7ea</color>
+    <color name="transparent">#00000000</color>
+</resources>

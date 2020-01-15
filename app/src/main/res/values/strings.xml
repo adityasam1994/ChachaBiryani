@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ChachaBiryani</string>
+    <string name="Rs">\u20B9</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="paytmid">aYZduM01989035476127</string>
+    <string name="paytmkey">wD249eyruo_GWp2e</string>
+    <string name="latitude">26.7199734</string>
+    <string name="longitude">83.3867575</string>
+    <string name="delivery_charge">300</string>
+</resources>

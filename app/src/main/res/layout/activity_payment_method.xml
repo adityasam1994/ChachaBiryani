@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cyfoes.aditya.chachabiryani.payment_method">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--action bar-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:translationZ="5dp"
+            android:background="@color/pinktop">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center_vertical|left"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="MY CART"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/muslim_imogi"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <!--action bar-->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+                <Button
+                    android:id="@+id/btncod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CASH ON DELIVERY"
+                    android:layout_margin="20dp"
+                    android:textColor="@color/pinktop"
+                    android:background="@drawable/rounded_button"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PAY WITH CARD"
+                    android:layout_margin="20dp"
+                    android:textColor="@color/pinktop"
+                    android:background="@drawable/rounded_button"/>
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/darkgrey"
+            android:fitsSystemWindows="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:itemBackground="@drawable/background_selector"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="#dedede"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_navigation_items" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
